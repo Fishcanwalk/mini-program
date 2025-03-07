@@ -8,6 +8,23 @@ mini progame create by python for learning thread
 Thread คือ ส่วนย่อยของโปรแกรมที่สามารถทำงานหลายอย่างพร้อมกันได้ โดยไม่ต้องรอให้แต่ละงานเสร็จทีละขั้นตอน เหมือนมีผู้ช่วยหลายคนทำงานไปพร้อมกันในโปรเซสเดียว ทำให้โปรแกรมทำงานได้เร็วขึ้นในบางกรณี เช่น การโหลดข้อมูลจากอินเทอร์เน็ตขณะทำงานอย่างอื่นไปด้วย
 
 ## การทำงานของ code
+
+```
+def print_numbers(name):
+    for i in range(1, 6):
+        print(f"{name}: {i}")
+        time.sleep(1)
+
+
+def print_10_numbers(name):
+    for i in range(1, 11):
+        print(f"{name}: {i}")
+        time.sleep(1)
+```
+code ประกอบด้วย 2 function 
+- print_numbers ทำการprintเลข1-5
+- print_10_numbers ทำการprintเลข1-10
+
 ```
 thread1 = threading.Thread(target=print_numbers, args=("Thread-1",))
 thread2 = threading.Thread(target=print_10_numbers, args=("Thread-2",))
